@@ -16,5 +16,23 @@
     Output:
         oirO
 
-*/
+*/#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char input[100]; // สร้างอาร์เรย์เก็บข้อความขนาดไม่เกิน 100 ตัวอักษร
+    printf("โปรดป้อนข้อความ: ");
+    fgets(input, sizeof(input), stdin); // อ่านข้อความจากผู้ใช้
+    
+    int length = strlen(input); // หาความยาวของข้อความ
+    
+    // แสดงตัวอักษรที่ถูกกลับด้านหน้า
+    printf("ผลลัพธ์: ");
+    for (int i = length - 1; i >= 0; i--) {
+        printf("%c", input[i]);
+    }
+    
+    return 0;
+}
+
 
